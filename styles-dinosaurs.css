@@ -1,0 +1,22 @@
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 2rem;
+}
+
+.artwork-card {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.image-container {
+    overflow: hidden;
+}
+
+.image-container img {
+    width: 60%;
+    height: 300px;
+    object-fit: cover;
+    display: block;
+}
