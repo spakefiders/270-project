@@ -112,6 +112,42 @@ main {
 
 }
 
+.fish-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+    padding: 1.25rem;
+}
+
+.fish-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.fish-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15);
+}
+
+.fish-card:active {
+  transform: translateY(1px);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.title {
+    font-size: 1.5rem;
+    background: linear-gradient(180deg, aqua, darkblue);
+    color: white;
+    padding: 0.625rem;
+    font-weight: bold;
+}
+
+.bio {
+    font-size: 1rem;
+    background: linear-gradient(0deg, aqua, darkblue);
+    color: white;
+    padding: 0.625rem;
+}
+
 form {
     padding: ;
 }
@@ -144,6 +180,10 @@ footer {
 
     .container {
         flex-direction: row;
+    }
+
+    .fish-grid {
+        grid-template-columns: repeat(auto-fit, minmax(min(100%, 250px), 1fr));
     }
 
 }
