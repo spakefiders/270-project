@@ -6,21 +6,52 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Sea Critters</title>
   <link rel="stylesheet" href="styles-sea-creature.css">
+
+
+
+  <style>
+    :root {
+      --scroll-ratio: 0;
+    }
+    h1 {
+      color: color-mix(in srgb, darkblue, azure calc(var(--scroll-ratio) * 100%));
+      transition: background-color 0.1s linear;
+    }
+    .seanav ul {
+      background-color: color-mix(in srgb, mediumblue, aqua calc(var(--scroll-ratio) * 100%));
+      transition: background-color 0.1s linear;      
+    }
+    .seanav a {
+      color: color-mix(in srgb, azure, darkblue calc(var(--scroll-ratio) * 100%));
+      background-color: color-mix(in srgb, darkblue, lightskyblue calc(var(--scroll-ratio) * 100%));
+      transition: background-color 0.1s linear;      
+    }
+  </style>
+
 </head>
 
 <body>
 
+  <script>
+    window.addEventListener('scroll', () => {
+      const maxScroll = document.documentElement.scrollHeight - window.innerHeight;
+      const ratio = Math.min(Math.max(window.scrollY / maxScroll, 0), 1);
+      document.documentElement.style.setProperty('--scroll-ratio', ratio);
+    });
+  </script>
+
   <header>
     <div class="container">
+      <img src="assets/sea/foosh.gif" style="min-width: 6rem; width: 10%; height: auto;" alt="sea creatures page icon">
       <h1>Big Critter Hours</h1>
     </div>
   </header>
 
   <nav>
     <ul>
-      <li><h2><a href="#shallows">Shallows</a></h2></li>
-      <li><h2><a href="#depths">Depths</a></h2></li>
-      <li><h2><a href="#abyss">Abyss</a></h2></li>
+      <li><h2><a href="index.html">Home</a></h2></li>
+      <li><h2><a href="dinosaurs.html">Dinosaurs</a></h2></li>
+      <li><h2><a href="primates.html">Primates</a></h2></li>
     </ul>
   </nav>
 
@@ -34,23 +65,16 @@
 <br>
 <br>
 <br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
-<br>
 
     <section id="shallows">
-      <h2>The Shallows</h2>
+      <h1>The Shallows</h1>
 
 
       <div class="fish-grid">
         <article class="fish-card">
 	  <h2 class="title">Sun-Spotted Gloopie</h2>
 	  <img src="assets/sea/feesh.gif" style="min-width: 6rem; width: 100%; height: auto;" alt="shallow water fish">
-	  <p class="bio">Loves nibbling toes. Also loves toes. (<2m)</p>
+	  <p class="bio">Loves nibbling toes. Also loves toes. (&lt;2m)</p>
         </article>
 
         <article class="fish-card">
@@ -90,7 +114,7 @@
 <br>
 
     <section id="depths">
-      <h2>The Depths</h2>
+      <h1>The Depths</h1>
 
       <div class="fish-grid">
         <article class="fish-card">
@@ -142,7 +166,7 @@
 <br>
 
     <section id="abyss">
-      <h2>The Abyss</h2>
+      <h1>The Abyss</h1>
 
       <div class="fish-grid">
         <article class="fish-card">
@@ -213,6 +237,15 @@
 
 
   </main>
+
+  <nav class="seanav">
+    <ul>
+      <li><h2><a href="#shallows">Shallows</a></h2></li>
+      <li><h2><a href="#depths">Depths</a></h2></li>
+      <li><h2><a href="#abyss">Abyss</a></h2></li>
+    </ul>
+  </nav>
+
   <footer>
     <p>Code, Images, and Copy &copy; 2026 Isaiah D. Miller</p>
   </footer>
