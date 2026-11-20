@@ -1,6 +1,4 @@
- 
- /* style note: Fairly clean and simple website. easy to navigate with nice cool colors. most boxes will be slightly rounded. text will look fairly standard to make it easy to read */
- 
+  
  
  <style>
     body {
@@ -16,12 +14,10 @@
 		border-radius: 15px;
 	}
 	
-	
-    :focus-visible{
-	outline: 0.4rem double black;
+	nav li {
+	float: down;
 	}
 	
-
 	li a {
 	display: block;
 	color: white;
@@ -30,6 +26,10 @@
 	text-decoration: none;
 	}
 	
+    :focus-visible{
+	outline: 0.4rem double black;
+	}
+
     button:hover,
 	button:focus-visible{
 		transform: scale(1.2);
@@ -39,7 +39,7 @@
 	button{
 		background-color: #E4FFBA;	
 		transition: transform 0.12s ease;
-		border-radius: 25px;	
+		border-radius: 6px;	
 		
 	}		
 	
@@ -55,6 +55,11 @@
     p{
     text-align: center;
     }
+	
+	img{
+		border-radius: 6px;
+	}
+	
 	
     h3{
 	text-align: center;
@@ -81,17 +86,24 @@
 
     }
 	
+
+	
     nav a {
       text-decoration: none;
       color: black;
-
+	  transition: transform 0.12s ease;
     }
 	
-
     main {
       padding: 1rem;
       background-image: linear-gradient(to bottom, #BF4A2C, #733224	);
     }
+	
+	
+	nav a:hover,
+	nav a:focus-visible{
+		transform: scale(1.2);
+	}
 	
 	
 	@media (min-width: 768px){
