@@ -31,6 +31,23 @@ h1 {
     display: inline-block;
 }
 
+    nav {
+      background: #8C0826;
+      border-radius: 25px;  
+    }
+    
+    nav ul {
+      list-style: none;
+      gap: 0.2rem;
+      padding: 0;
+      background: #570303;
+      letter-spacing: 4px;
+      border-radius: 20px;
+
+    }
+
+
+
 @media (max-width: 768px) {
     h1 {
         font-size: 3rem;
@@ -61,6 +78,10 @@ h1 {
         gap: 2rem;
         align-items: center;
     }
+
+    nav ul{
+            display: flex;
+        }
 }
 
 
